@@ -113,8 +113,7 @@ def parse_config_cli(path, args):
 
 
 def prepare(argv):
-    """ Prepares the experiment information including export directory and
-        configuration.
+    """ Prepares the experiment information including export directory and configuration.
         
     Args:
         argv: configuration to be loaded.
