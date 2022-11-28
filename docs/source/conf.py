@@ -2,9 +2,8 @@
 # add these directories to sys.path here.
 import pathlib
 import sys
-import os
 sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
-sys.path.insert(0, os.path.abspath('../cellot'))
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -24,7 +23,6 @@ release = '0.1'
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.napoleon',
-    'sphinx.ext.intersphinx',
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
@@ -35,7 +33,7 @@ exclude_patterns = []
 
 # Napoleon settings
 napoleon_google_docstring = True
-napoleon_numpy_docstring = False
+napoleon_numpy_docstring = True
 napoleon_include_init_with_doc = False
 napoleon_include_private_with_doc = False
 napoleon_include_special_with_doc = True
@@ -49,12 +47,8 @@ napoleon_preprocess_types = False
 napoleon_type_aliases = None
 napoleon_attr_annotations = True
 
-intersphinx_mapping = {
-    'python': ('https://docs.python.org/', None),
-    'numpy': ('http://docs.scipy.org/doc/numpy/', None)
-}
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+html_theme = 'furo'
 html_static_path = ['_static']
