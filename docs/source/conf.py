@@ -4,7 +4,7 @@ import pathlib
 import sys
 import os
 sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
-sys.path.insert(0, os.path.abspath('../cellot'))
+#sys.path.insert(0, os.path.abspath('../cellot'))
 
 # Configuration file for the Sphinx documentation builder.
 #
@@ -54,3 +54,7 @@ napoleon_attr_annotations = True
 
 # html_theme = 'furo'
 html_static_path = ['_static']
+
+autodoc_mock_imports = ['numpy','anndata','torch',
+    'pandas','absl','sklearn','scipy','collections','yaml',
+    'ml_collections','matplotlib','tqdm','seaborn',]

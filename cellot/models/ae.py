@@ -439,3 +439,7 @@ class ConditionalAutoEncoder(AutoEncoder):
         target_code = self.conditions.index(target)
         outputs = self.outputs(inputs, decode_as=target_code).recon
         return outputs
+
+
+def compute_scgen_shift():
+    """ Created for other modules' dependencies. """

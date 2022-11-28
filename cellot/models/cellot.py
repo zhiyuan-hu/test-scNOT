@@ -221,3 +221,15 @@ def numerical_gradient(param:float, fxn, *args, eps=1e-4):
 
     # Computes and returns the gradient.
     return (plus - minus) / (2 * eps)
+
+
+def load_cellot_model():
+    """ Created for other modules' dependencies. """
+
+
+def compute_loss_f():
+    """ Created for other modules' dependencies. """
+
+
+def compute_loss_g():
+    """ Created for other modules' dependencies. """
