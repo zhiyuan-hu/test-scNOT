@@ -53,6 +53,7 @@ napoleon_attr_annotations = True
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # html_theme = 'furo'
+html_theme = "sphinx_book_theme"
 html_static_path = ['_static']
 
 autodoc_mock_imports = ['numpy','anndata','torch',
