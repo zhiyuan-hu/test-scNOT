@@ -1,6 +1,6 @@
 #!D:\OneDrive - ETH Zurich\test-repo-scNOT\test-scNOT\.venv\Scripts\python.exe
 
-# $Id: rst2html.py 8927 2022-01-03 23:50:05Z milde $
+# $Id: rst2html.py 4564 2006-05-21 20:44:42Z wiemann $
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 

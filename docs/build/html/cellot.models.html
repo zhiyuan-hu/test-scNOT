@@ -1,53 +1,306 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>cellot.models package &#8212; scNOT 0.1 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
 
-  </head><body>
-  
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">scNOT 0.1 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="usage.html">
+   Usage
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
           
 
-          <div class="body" role="main">
-            
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/cellot.models.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.models.ae">
+   cellot.models.ae module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.models.cellot">
+   cellot.models.cellot module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.models">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>cellot.models package</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.models.ae">
+   cellot.models.ae module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.models.cellot">
+   cellot.models.cellot module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.models">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
   <section id="cellot-models-package">
-<h1>cellot.models package<a class="headerlink" href="#cellot-models-package" title="Permalink to this heading">¶</a></h1>
+<h1>cellot.models package<a class="headerlink" href="#cellot-models-package" title="Permalink to this headline">#</a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="module-cellot.models.ae">
-<span id="cellot-models-ae-module"></span><h2>cellot.models.ae module<a class="headerlink" href="#module-cellot.models.ae" title="Permalink to this heading">¶</a></h2>
+<span id="cellot-models-ae-module"></span><h2>cellot.models.ae module<a class="headerlink" href="#module-cellot.models.ae" title="Permalink to this headline">#</a></h2>
 <p>Implementation of autoencoders.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">AutoEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">AutoEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Module</span></code></p>
 <p>Implementation of autoencoders inherited from nn.Module.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>beta</strong> – regularization coefficient.</p></li>
 <li><p><strong>latent_dim</strong> – latent dimension of the embedding.</p></li>
@@ -60,71 +313,71 @@
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.LossComps">
-<span class="sig-name descname"><span class="pre">LossComps</span></span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.LossComps" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">AELoss</span></code></p>
+<span class="sig-name descname"><span class="pre">LossComps</span></span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.LossComps" title="Permalink to this definition">#</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">cellot.models.ae.AELoss</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.Outputs">
-<span class="sig-name descname"><span class="pre">Outputs</span></span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.Outputs" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">AEOutputs</span></code></p>
+<span class="sig-name descname"><span class="pre">Outputs</span></span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.Outputs" title="Permalink to this definition">#</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">cellot.models.ae.AEOutputs</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.build_decoder">
-<span class="sig-name descname"><span class="pre">build_decoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latent_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_units</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.build_decoder" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">build_decoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latent_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_units</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.build_decoder" title="Permalink to this definition">#</a></dt>
 <dd><p>Loads a decoder module for the autoencoder.</p>
 <p>The hidden units are reversed from the encoder module.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.build_encoder">
-<span class="sig-name descname"><span class="pre">build_encoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latent_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_units</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.build_encoder" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">build_encoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latent_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_units</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.build_encoder" title="Permalink to this definition">#</a></dt>
 <dd><p>Loads an encoder module for the autoencoder.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.compute_encoding_shift">
-<span class="sig-name descname"><span class="pre">compute_encoding_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.compute_encoding_shift" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_encoding_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.compute_encoding_shift" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes the shift between encodings of control cells and encodings of perturbed cells.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.decode">
-<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.decode" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.decode" title="Permalink to this definition">#</a></dt>
 <dd><p>Recovers the input from the encodings.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.encode">
-<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.encode" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.encode" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes the encodings given input features.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.forward" title="Permalink to this definition">#</a></dt>
 <dd><p>Given inputs, returns the loss, the composition of loss and the outputs.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.loss">
-<span class="sig-name descname"><span class="pre">loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.loss" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.loss" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes the loss on some inputs and its corresponding compositions.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.outputs">
-<span class="sig-name descname"><span class="pre">outputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.outputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">outputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.outputs" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes the ouput given input features.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.AutoEncoder.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.predict" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.AutoEncoder.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Predicts the features of cells under some perturbation using AutoEncoder.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>model</strong> – AutoEncoder, model used for prediction.</p></li>
 <li><p><strong>inputs</strong> – inputs of the model.</p></li>
@@ -140,11 +393,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cellot.models.ae.ConditionalAutoEncoder">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">ConditionalAutoEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#cellot.models.ae.AutoEncoder" title="cellot.models.ae.AutoEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">AutoEncoder</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">ConditionalAutoEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cellot.models.ae.AutoEncoder" title="cellot.models.ae.AutoEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">cellot.models.ae.AutoEncoder</span></code></a></p>
 <p>Conditional autoencoders inherited from the AutoEncoder class.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>conditions</strong> – list of conditions considered.</p></li>
 <li><p><strong>n_cats</strong> – number of conditions considered.</p></li>
@@ -153,7 +406,7 @@
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.ConditionalAutoEncoder.build_decoder">
-<span class="sig-name descname"><span class="pre">build_decoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latent_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_units</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.build_decoder" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">build_decoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latent_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_units</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.build_decoder" title="Permalink to this definition">#</a></dt>
 <dd><p>Builds the decoder module using the method from AutoEncoder.
 The encoding dimension equals to the latent dimension plus the dimension
 of one-hot vectors which represent the conditions.</p>
@@ -161,7 +414,7 @@ of one-hot vectors which represent the conditions.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.ConditionalAutoEncoder.build_encoder">
-<span class="sig-name descname"><span class="pre">build_encoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latent_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_units</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.build_encoder" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">build_encoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latent_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_units</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.build_encoder" title="Permalink to this definition">#</a></dt>
 <dd><p>Builds the encoder module using the method from AutoEncoder.
 The input dimension equals to the feature dimension plus the dimension
 of one-hot vectors which represent the conditions.</p>
@@ -169,48 +422,48 @@ of one-hot vectors which represent the conditions.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.ConditionalAutoEncoder.condition">
-<span class="sig-name descname"><span class="pre">condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.condition" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">condition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.condition" title="Permalink to this definition">#</a></dt>
 <dd><p>Extends the features with conditions using one-hot vectors.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.ConditionalAutoEncoder.decode">
-<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">codes</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.decode" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">codes</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.decode" title="Permalink to this definition">#</a></dt>
 <dd><p>Decodes the latent embeddings with conditions.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.ConditionalAutoEncoder.encode">
-<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.encode" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.encode" title="Permalink to this definition">#</a></dt>
 <dd><p>Encodes the input features with conditions.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.ConditionalAutoEncoder.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.forward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.forward" title="Permalink to this definition">#</a></dt>
 <dd><p>Forward pass function to compute the outputs, the corresponding loss
 and its compositions.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.ConditionalAutoEncoder.outputs">
-<span class="sig-name descname"><span class="pre">outputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_as</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.outputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">outputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decode_as</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.outputs" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes the outputs using inputs with conditions.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.ae.ConditionalAutoEncoder.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.predict" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.ConditionalAutoEncoder.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Predicts the reconstruction for some inputs with conditions using ConditionalAutoEncoder.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>model</strong> – ConditionalAutoEncoder, model to reconstruct the inputs.</p></li>
 <li><p><strong>inputs</strong> – inputs for the model.</p></li>
 <li><p><strong>target</strong> – the condition used for the reconstruction.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The reconstruction outputs.</p>
 </dd>
 </dl>
@@ -220,23 +473,23 @@ and its compositions.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cellot.models.ae.DNN">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">DNN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.DNN" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">module</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">DNN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.DNN" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.module</span></code></p>
 <p>Implementation of dense neural networks.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.models.ae.compute_scgen_shift">
-<span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">compute_scgen_shift</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.compute_scgen_shift" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">compute_scgen_shift</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.compute_scgen_shift" title="Permalink to this definition">#</a></dt>
 <dd><p>Created for other modules’ dependencies.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.models.ae.dnn">
-<span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">dnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dinput</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doutput</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(16,</span> <span class="pre">16)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ReLU'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.nn.Sequential</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.dnn" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">dnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dinput</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doutput</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(16,</span> <span class="pre">16)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ReLU'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">torch.nn.Sequential</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.dnn" title="Permalink to this definition">#</a></dt>
 <dd><p>Loads a deep neural network.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dinput</strong> – int, input dimension.</p></li>
 <li><p><strong>doutput</strong> – int, output dimension.</p></li>
@@ -247,7 +500,7 @@ and its compositions.</p>
 <li><p><strong>**kwargs</strong> – additional parameters.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A torch.nn DNN.</p>
 </dd>
 </dl>
@@ -255,17 +508,17 @@ and its compositions.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.models.ae.load_autoencoder_model">
-<span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">load_autoencoder_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.load_autoencoder_model" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">load_autoencoder_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.load_autoencoder_model" title="Permalink to this definition">#</a></dt>
 <dd><p>Loads an autoencoder.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>config</strong> – configuration of autoencoders.</p></li>
 <li><p><strong>restore</strong> – file path from which a previous state is restored. Default is None.</p></li>
 <li><p><strong>**kwargs</strong> – dict to load autoencoders.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ol class="arabic simple">
 <li><p>An instance of the required autoencoder.</p></li>
 <li><p>A torch.optim.Adam optimizer.</p></li>
@@ -277,16 +530,16 @@ and its compositions.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.models.ae.load_networks">
-<span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">load_networks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.load_networks" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">load_networks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.load_networks" title="Permalink to this definition">#</a></dt>
 <dd><p>Loads the network structure of autoencoders.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>config</strong> – configuration of autoencoders.</p></li>
 <li><p><strong>**kwargs</strong> – dict to load autoencoders.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>An instance of the required autoencoder.</p>
 </dd>
 </dl>
@@ -294,16 +547,16 @@ and its compositions.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.models.ae.load_optimizer">
-<span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">load_optimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.load_optimizer" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.models.ae.</span></span><span class="sig-name descname"><span class="pre">load_optimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.ae.load_optimizer" title="Permalink to this definition">#</a></dt>
 <dd><p>Loads Adam optimizer for autoencoders.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>config</strong> – configuration of autoencoders.</p></li>
 <li><p><strong>params</strong> – parameters for Adam optimizer.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A torch.optim.Adam optimizer.</p>
 </dd>
 </dl>
@@ -311,15 +564,15 @@ and its compositions.</p>
 
 </section>
 <section id="module-cellot.models.cellot">
-<span id="cellot-models-cellot-module"></span><h2>cellot.models.cellot module<a class="headerlink" href="#module-cellot.models.cellot" title="Permalink to this heading">¶</a></h2>
+<span id="cellot-models-cellot-module"></span><h2>cellot.models.cellot module<a class="headerlink" href="#module-cellot.models.cellot" title="Permalink to this headline">#</a></h2>
 <p>Implementation of the CellOT structure.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="cellot.models.cellot.CellOT">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">CellOT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">CellOT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Implementation of the CellOT structure.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>f</strong> (<a class="reference internal" href="cellot.networks.html#cellot.networks.icnns.ICNN" title="cellot.networks.icnns.ICNN"><em>ICNN</em></a>) – one of the dual networks.</p></li>
 <li><p><strong>g</strong> (<a class="reference internal" href="cellot.networks.html#cellot.networks.icnns.ICNN" title="cellot.networks.icnns.ICNN"><em>ICNN</em></a>) – one of the dual networks.</p></li>
@@ -329,22 +582,22 @@ and its compositions.</p>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.cellot.CellOT.build_networks">
-<span class="sig-name descname"><span class="pre">build_networks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.build_networks" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">build_networks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.build_networks" title="Permalink to this definition">#</a></dt>
 <dd><p>Builds dual potential ICNNs with specified configuration.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.cellot.CellOT.build_opts">
-<span class="sig-name descname"><span class="pre">build_opts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.build_opts" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">build_opts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.build_opts" title="Permalink to this definition">#</a></dt>
 <dd><p>Builds optimizers for CELLOT networks.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.cellot.CellOT.compute_g_constraint">
-<span class="sig-name descname"><span class="pre">compute_g_constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.compute_g_constraint" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_g_constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.compute_g_constraint" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes the additional penalty for negative weights of g.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>form</strong> – indicates which type of measure is performed for negative weights. Default is None.</p></li>
 <li><p><strong>beta</strong> – penalty strength. Default is 0.</p></li>
@@ -355,31 +608,31 @@ and its compositions.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.cellot.CellOT.compute_loss_f">
-<span class="sig-name descname"><span class="pre">compute_loss_f</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transport</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.compute_loss_f" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_loss_f</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transport</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.compute_loss_f" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes the loss of ICNN f given input features and predicted features.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.cellot.CellOT.compute_loss_g">
-<span class="sig-name descname"><span class="pre">compute_loss_g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transport</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.compute_loss_g" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_loss_g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transport</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.compute_loss_g" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes the loss of ICNN g given input features and predicted features.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.cellot.CellOT.compute_w2_distance">
-<span class="sig-name descname"><span class="pre">compute_w2_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transport</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.compute_w2_distance" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_w2_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transport</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.compute_w2_distance" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes the 2-norm Wasserstein distance between predictions and targets.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.cellot.CellOT.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.predict" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Predicts the cell features after perturbation with CellOT.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cellot.models.cellot.CellOT.restore">
-<span class="sig-name descname"><span class="pre">restore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.restore" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">restore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.CellOT.restore" title="Permalink to this definition">#</a></dt>
 <dd><p>Restores a previous state.</p>
 </dd></dl>
 
@@ -387,17 +640,17 @@ and its compositions.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cellot.models.cellot.FGPair">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">FGPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.FGPair" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">FGPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.FGPair" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cellot.models.cellot.FGPair.f">
-<span class="sig-name descname"><span class="pre">f</span></span><a class="headerlink" href="#cellot.models.cellot.FGPair.f" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">f</span></span><a class="headerlink" href="#cellot.models.cellot.FGPair.f" title="Permalink to this definition">#</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cellot.models.cellot.FGPair.g">
-<span class="sig-name descname"><span class="pre">g</span></span><a class="headerlink" href="#cellot.models.cellot.FGPair.g" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">g</span></span><a class="headerlink" href="#cellot.models.cellot.FGPair.g" title="Permalink to this definition">#</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
@@ -405,28 +658,28 @@ and its compositions.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.models.cellot.compute_loss_f">
-<span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">compute_loss_f</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.compute_loss_f" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">compute_loss_f</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.compute_loss_f" title="Permalink to this definition">#</a></dt>
 <dd><p>Created for other modules’ dependencies.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.models.cellot.compute_loss_g">
-<span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">compute_loss_g</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.compute_loss_g" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">compute_loss_g</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.compute_loss_g" title="Permalink to this definition">#</a></dt>
 <dd><p>Created for other modules’ dependencies.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.models.cellot.load_cellot_model">
-<span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">load_cellot_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.load_cellot_model" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">load_cellot_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.load_cellot_model" title="Permalink to this definition">#</a></dt>
 <dd><p>Created for other modules’ dependencies.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.models.cellot.numerical_gradient">
-<span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">numerical_gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fxn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.numerical_gradient" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.models.cellot.</span></span><span class="sig-name descname"><span class="pre">numerical_gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fxn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.models.cellot.numerical_gradient" title="Permalink to this definition">#</a></dt>
 <dd><p>Numerically computes the gradient of a function at some point.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>param</strong> – float, the parameter to define the input position of the function.</p></li>
 <li><p><strong>fxn</strong> – the function of which the gradient is computed on.</p></li>
@@ -434,7 +687,7 @@ and its compositions.</p>
 <li><p><strong>eps</strong> – the small value perturbed on the param. Default is 1e-4.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The gradient of fxn at <a href="#id1"><span class="problematic" id="id2">*</span></a>args.</p>
 </dd>
 </dl>
@@ -442,74 +695,41 @@ and its compositions.</p>
 
 </section>
 <section id="module-cellot.models">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cellot.models" title="Permalink to this heading">¶</a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cellot.models" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
 
-          </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">scNOT</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
 </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-
-
-
-
-
-
-
-
+            </footer>
         </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Charlotte Bunne & Zhiyuan Hu<br/>
+  
+      &copy; Copyright 2022, Charlotte Bunne &amp; Zhiyuan Hu.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
       </div>
-      <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2022, Charlotte Bunne & Zhiyuan Hu.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/cellot.models.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-    
 
-    
   </body>
 </html>

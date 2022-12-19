@@ -1,95 +1,378 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>cellot.utils package &#8212; scNOT 0.1 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
 
-  </head><body>
-  
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">scNOT 0.1 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="usage.html">
+   Usage
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
           
 
-          <div class="body" role="main">
-            
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/cellot.utils.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils.evaluate">
+   cellot.utils.evaluate module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils.flags">
+   cellot.utils.flags module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils.helpers">
+   cellot.utils.helpers module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils.loaders">
+   cellot.utils.loaders module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils.viz">
+   cellot.utils.viz module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>cellot.utils package</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils.evaluate">
+   cellot.utils.evaluate module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils.flags">
+   cellot.utils.flags module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils.helpers">
+   cellot.utils.helpers module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils.loaders">
+   cellot.utils.loaders module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils.viz">
+   cellot.utils.viz module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-cellot.utils">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
   <section id="cellot-utils-package">
-<h1>cellot.utils package<a class="headerlink" href="#cellot-utils-package" title="Permalink to this heading">¶</a></h1>
+<h1>cellot.utils package<a class="headerlink" href="#cellot-utils-package" title="Permalink to this headline">#</a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="module-cellot.utils.evaluate">
-<span id="cellot-utils-evaluate-module"></span><h2>cellot.utils.evaluate module<a class="headerlink" href="#module-cellot.utils.evaluate" title="Permalink to this heading">¶</a></h2>
+<span id="cellot-utils-evaluate-module"></span><h2>cellot.utils.evaluate module<a class="headerlink" href="#module-cellot.utils.evaluate" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.evaluate.compute_drug_signature_differences">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">compute_drug_signature_differences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">control</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">treated</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pushfwd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.compute_drug_signature_differences" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">compute_drug_signature_differences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">control</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">treated</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pushfwd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.compute_drug_signature_differences" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.evaluate.compute_knn_enrichment">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">compute_knn_enrichment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pushfwd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">treated</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_joint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncells</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.compute_knn_enrichment" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">compute_knn_enrichment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pushfwd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">treated</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_joint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncells</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.compute_knn_enrichment" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.evaluate.compute_mmd_df">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">compute_mmd_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transport</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gammas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subsample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncells</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nreps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.compute_mmd_df" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">compute_mmd_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transport</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gammas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subsample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncells</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nreps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.compute_mmd_df" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.evaluate.load_all_inputs">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">load_all_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">where</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.load_all_inputs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">load_all_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">where</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.load_all_inputs" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.evaluate.load_conditions">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">load_conditions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">where</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.load_conditions" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">load_conditions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">where</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setting</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.load_conditions" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.evaluate.load_projectors">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">load_projectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aedir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">where</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.load_projectors" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">load_projectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aedir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">where</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.load_projectors" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.evaluate.patch_scgen_shift">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">patch_scgen_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.patch_scgen_shift" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">patch_scgen_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.patch_scgen_shift" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.evaluate.read_embedding_context">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">read_embedding_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.read_embedding_context" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.evaluate.</span></span><span class="sig-name descname"><span class="pre">read_embedding_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.evaluate.read_embedding_context" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </section>
 <section id="module-cellot.utils.flags">
-<span id="cellot-utils-flags-module"></span><h2>cellot.utils.flags module<a class="headerlink" href="#module-cellot.utils.flags" title="Permalink to this heading">¶</a></h2>
+<span id="cellot-utils-flags-module"></span><h2>cellot.utils.flags module<a class="headerlink" href="#module-cellot.utils.flags" title="Permalink to this headline">#</a></h2>
 <p>Helper functions regarding flags.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.flags.collect_serializable_flags">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.flags.</span></span><span class="sig-name descname"><span class="pre">collect_serializable_flags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">absl.flags.FlagValues</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.flags.collect_serializable_flags" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.flags.</span></span><span class="sig-name descname"><span class="pre">collect_serializable_flags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">absl.flags.FlagValues</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.flags.collect_serializable_flags" title="Permalink to this definition">#</a></dt>
 <dd><p>Collects all serializable flags.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>flags</strong> – flags.FlagValues containing the configuration information.</p></li>
 <li><p><strong>keyflags</strong> – bool, whether to only return key flags. Default is False.</p></li>
@@ -99,7 +382,7 @@
 <p>A serializable object is able to be transformed into a stream of bytes, so that
 recovering the identical object from the stream is possible.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A dict containing all serializable flags.</p>
 </dd>
 </dl>
@@ -107,17 +390,17 @@ recovering the identical object from the stream is possible.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.flags.flags_to_json">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.flags.</span></span><span class="sig-name descname"><span class="pre">flags_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blacklist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.flags.flags_to_json" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.flags.</span></span><span class="sig-name descname"><span class="pre">flags_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blacklist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.flags.flags_to_json" title="Permalink to this definition">#</a></dt>
 <dd><p>Puts flags into a dict to be stored by json format.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cfg</strong> – flags.FlagValues containing the configuration information.</p></li>
 <li><p><strong>blacklist</strong> – list specifying which flags NOT to be stored. Default is None.</p></li>
 <li><p><strong>keyflags</strong> – bool, whether to only return key flags. Default is False.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A dict with its keys being flags’ names and its values being flags’ values.</p>
 </dd>
 </dl>
@@ -125,17 +408,17 @@ recovering the identical object from the stream is possible.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.flags.get_flagdict">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.flags.</span></span><span class="sig-name descname"><span class="pre">get_flagdict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">absl.flags.FlagValues</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cellot.utils.flags.get_flagdict" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.flags.</span></span><span class="sig-name descname"><span class="pre">get_flagdict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">absl.flags.FlagValues</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cellot.utils.flags.get_flagdict" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the dict of module_name -&gt; list of defined flags.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cfg</strong> – flags.FlagValues containing the configuration information.</p></li>
 <li><p><strong>keyflags</strong> – bool, whether to only return key flags (flags one defines in the code).
 Default is False.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A dict, with keys being module names (str), and values being lists
 of Flag objects.</p>
 </dd>
@@ -144,13 +427,13 @@ of Flag objects.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.flags.rank_flag_module">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.flags.</span></span><span class="sig-name descname"><span class="pre">rank_flag_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.flags.rank_flag_module" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.flags.</span></span><span class="sig-name descname"><span class="pre">rank_flag_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.flags.rank_flag_module" title="Permalink to this definition">#</a></dt>
 <dd><p>Sorts tensorflow and absl flags to the last.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>item</strong> – a key-value pair.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A tuple of the key and its rank information.</p>
 </dd>
 </dl>
@@ -158,10 +441,10 @@ of Flag objects.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.flags.write_flagfile">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.flags.</span></span><span class="sig-name descname"><span class="pre">write_flagfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'w'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.flags.write_flagfile" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.flags.</span></span><span class="sig-name descname"><span class="pre">write_flagfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'w'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.flags.write_flagfile" title="Permalink to this definition">#</a></dt>
 <dd><p>Stores absl.flags to a flagfile.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>path</strong> – str, filepath where the flags are to be stored.</p></li>
 <li><p><strong>cfg</strong> – absl.FlagValues, configuration to be stored. Default is None.</p></li>
@@ -175,20 +458,20 @@ of Flag objects.</p>
 
 </section>
 <section id="module-cellot.utils.helpers">
-<span id="cellot-utils-helpers-module"></span><h2>cellot.utils.helpers module<a class="headerlink" href="#module-cellot.utils.helpers" title="Permalink to this heading">¶</a></h2>
+<span id="cellot-utils-helpers-module"></span><h2>cellot.utils.helpers module<a class="headerlink" href="#module-cellot.utils.helpers" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="cellot.utils.helpers.DotDict">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">DotDict</span></span><a class="headerlink" href="#cellot.utils.helpers.DotDict" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">DotDict</span></span><a class="headerlink" href="#cellot.utils.helpers.DotDict" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
 <p>dot.notation access to dictionary attributes</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.helpers.dump_config">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">dump_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ml_collections.ConfigDict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.dump_config" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">dump_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ml_collections.ConfigDict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.dump_config" title="Permalink to this definition">#</a></dt>
 <dd><p>Dumps the configuration to the specified path.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>path</strong> – where to store the config.</p></li>
 <li><p><strong>config</strong> – configuration to be stored.</p></li>
@@ -199,21 +482,21 @@ of Flag objects.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.helpers.flat_dict">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">flat_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.flat_dict" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">flat_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.flat_dict" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.helpers.load_config">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unparsed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ml_collections.ConfigDict</span></span></span><a class="headerlink" href="#cellot.utils.helpers.load_config" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unparsed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ml_collections.ConfigDict</span></span></span><a class="headerlink" href="#cellot.utils.helpers.load_config" title="Permalink to this definition">#</a></dt>
 <dd><p>Loads configuration from storage.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>path</strong> (<em>str</em>) – specifies the location where the configuration is stored.</p></li>
 <li><p><strong>unparsed</strong> – configuration that needs to be parsed. Default is None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A ConfigDict that contains the configuration information.</p>
 </dd>
 </dl>
@@ -221,18 +504,18 @@ of Flag objects.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.helpers.nest_dict">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">nest_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_dot_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.nest_dict" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">nest_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_dot_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.nest_dict" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.helpers.parse_cli_opts">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">parse_cli_opts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cellot.utils.helpers.parse_cli_opts" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">parse_cli_opts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cellot.utils.helpers.parse_cli_opts" title="Permalink to this definition">#</a></dt>
 <dd><p>Parses command line options.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>args</strong> – options to be parsed.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A dict containing the parsed options.</p>
 </dd>
 </dl>
@@ -240,16 +523,16 @@ of Flag objects.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.helpers.parse_config_cli">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">parse_config_cli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ml_collections.ConfigDict</span></span></span><a class="headerlink" href="#cellot.utils.helpers.parse_config_cli" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">parse_config_cli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ml_collections.ConfigDict</span></span></span><a class="headerlink" href="#cellot.utils.helpers.parse_config_cli" title="Permalink to this definition">#</a></dt>
 <dd><p>Loads configuration and parses command line arguments.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>path</strong> – filepaths from where the configuration is loaded.</p></li>
 <li><p><strong>args</strong> – command line arguments to be parsed.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A ConfigDict containing config info.</p>
 </dd>
 </dl>
@@ -257,21 +540,21 @@ of Flag objects.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.helpers.split_rec">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">split_rec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_dot_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.split_rec" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">split_rec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_dot_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.split_rec" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.helpers.symlink_to_logfile">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">symlink_to_logfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loglink</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.symlink_to_logfile" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">symlink_to_logfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loglink</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.symlink_to_logfile" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.helpers.write_metadata">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">write_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">argv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.write_metadata" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.helpers.</span></span><span class="sig-name descname"><span class="pre">write_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">argv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.helpers.write_metadata" title="Permalink to this definition">#</a></dt>
 <dd><p>Writes the metadata of the program.</p>
 <p>Includes info about the program, its arguments and executed time.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>outpath</strong> – filepath to store the metadata.</p></li>
 <li><p><strong>argv</strong> – arguments to be saved.</p></li>
@@ -282,14 +565,14 @@ of Flag objects.</p>
 
 </section>
 <section id="module-cellot.utils.loaders">
-<span id="cellot-utils-loaders-module"></span><h2>cellot.utils.loaders module<a class="headerlink" href="#module-cellot.utils.loaders" title="Permalink to this heading">¶</a></h2>
+<span id="cellot-utils-loaders-module"></span><h2>cellot.utils.loaders module<a class="headerlink" href="#module-cellot.utils.loaders" title="Permalink to this headline">#</a></h2>
 <p>Functions to load data, models.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.loaders.load">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.loaders.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ml_collections.ConfigDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_model_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.loaders.load" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.loaders.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ml_collections.ConfigDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_model_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.loaders.load" title="Permalink to this definition">#</a></dt>
 <dd><p>An integrated loader function for both data and models.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>config</strong> – ConfigDict that contains the configuration info.</p></li>
 <li><p><strong>restore</strong> – filepath from which a previous state of the model is restored. Default is None.</p></li>
@@ -297,7 +580,7 @@ of Flag objects.</p>
 <li><p><strong>**kwargs</strong> – additional arguments.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The model, its corresponding optimizer, the data loader. Also returns model parameters as a
 dict if include_model_kwargs is True.</p>
 </dd>
@@ -306,16 +589,16 @@ dict if include_model_kwargs is True.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.loaders.load_data">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.loaders.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ml_collections.ConfigDict</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#cellot.utils.loaders.load_data" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.loaders.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ml_collections.ConfigDict</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#cellot.utils.loaders.load_data" title="Permalink to this definition">#</a></dt>
 <dd><p>Loads the data for experiments.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>config</strong> – ConfigDict that contains the configuration info.</p></li>
 <li><p><strong>**kwargs</strong> – additional arguments.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A tuple consists of data used for the experiment.</p>
 </dd>
 </dl>
@@ -323,17 +606,17 @@ dict if include_model_kwargs is True.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.loaders.load_model">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.loaders.</span></span><span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ml_collections.ConfigDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.loaders.load_model" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.loaders.</span></span><span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ml_collections.ConfigDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.loaders.load_model" title="Permalink to this definition">#</a></dt>
 <dd><p>Loads the model for experiments.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>config</strong> – ConfigDict that contains the configuration info.</p></li>
 <li><p><strong>restore</strong> – filepath from which a previous state is restored. Default is None.</p></li>
 <li><p><strong>**kwargs</strong> – additional arguments.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A model and its corresponding optimizer.</p>
 </dd>
 </dl>
@@ -341,138 +624,105 @@ dict if include_model_kwargs is True.</p>
 
 </section>
 <section id="module-cellot.utils.viz">
-<span id="cellot-utils-viz-module"></span><h2>cellot.utils.viz module<a class="headerlink" href="#module-cellot.utils.viz" title="Permalink to this heading">¶</a></h2>
+<span id="cellot-utils-viz-module"></span><h2>cellot.utils.viz module<a class="headerlink" href="#module-cellot.utils.viz" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.clean_axes_grid">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">clean_axes_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.clean_axes_grid" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">clean_axes_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.clean_axes_grid" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.create_axes_grid">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">create_axes_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nitems</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.create_axes_grid" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">create_axes_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nitems</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.create_axes_grid" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.create_map">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">create_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mappable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.create_map" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">create_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mappable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.create_map" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.legend_from_lut">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">legend_from_lut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lut</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.legend_from_lut" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">legend_from_lut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lut</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.legend_from_lut" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.legend_handle">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">legend_handle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tab10'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.legend_handle" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">legend_handle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tab10'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markersize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.legend_handle" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.modify_legend">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">modify_legend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.modify_legend" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">modify_legend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.modify_legend" title="Permalink to this definition">#</a></dt>
 <dd><p>Modify a legend object after it has been created.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.plot_corrs">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">plot_corrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_pretty_print</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xtick_pretty_print</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.plot_corrs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">plot_corrs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_pretty_print</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xtick_pretty_print</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.plot_corrs" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.plot_marginals">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">plot_marginals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dfs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qclip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle_pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.plot_marginals" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">plot_marginals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dfs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qclip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle_pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_pprint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.plot_marginals" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.plot_umaps">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">plot_umaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">umaps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_pretty_print</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.plot_umaps" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">plot_umaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">umaps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_pretty_print</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.plot_umaps" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.plot_umaps_binary">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">plot_umaps_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">umaps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_pretty_print</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.plot_umaps_binary" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">plot_umaps_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">umaps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_pretty_print</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.plot_umaps_binary" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.pretty_print_feature">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">pretty_print_feature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.pretty_print_feature" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">pretty_print_feature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.pretty_print_feature" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="cellot.utils.viz.scale_figsize">
-<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">scale_figsize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nrows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.scale_figsize" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">cellot.utils.viz.</span></span><span class="sig-name descname"><span class="pre">scale_figsize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nrows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cellot.utils.viz.scale_figsize" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </section>
 <section id="module-cellot.utils">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cellot.utils" title="Permalink to this heading">¶</a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cellot.utils" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
 
-          </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">scNOT</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
 </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-
-
-
-
-
-
-
-
+            </footer>
         </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Charlotte Bunne & Zhiyuan Hu<br/>
+  
+      &copy; Copyright 2022, Charlotte Bunne &amp; Zhiyuan Hu.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
       </div>
-      <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2022, Charlotte Bunne & Zhiyuan Hu.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/cellot.utils.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-    
 
-    
   </body>
 </html>
